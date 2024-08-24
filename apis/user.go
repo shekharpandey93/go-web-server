@@ -7,7 +7,6 @@ import (
 	"github.com/go-playground/validator/v10"
 	"init-project/Modal"
 	"net/http"
-	"sync"
 )
 
 func loginHandler(w http.ResponseWriter, r *http.Request) {
@@ -29,8 +28,6 @@ func loginHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	w.WriteHeader(http.StatusOK)
-
-	sync.WaitGroup{}
 }
 
 func logoutHandler(w http.ResponseWriter, r *http.Request) {
